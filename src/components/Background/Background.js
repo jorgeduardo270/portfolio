@@ -59,12 +59,12 @@ function Background (props){
                         key= {Math.floor(Math.random() * 10000)}
                         className="slowerScroll Background"
                         bottom= {Math.floor(Math.random() * 100)}
-                        left=   {Math.floor(Math.random() * 100) -10}
+                        left=   {Math.floor(Math.random() * 100) -5}
                         right=  {Math.floor(Math.random() * 100)}
-                        top=    {Math.floor(Math.random() * 100) -10}>
+                        top=    {Math.floor(Math.random() * 100) -5}>
                         <ImageBackground 
                             anim = {anims[Math.floor(Math.random() * anims.length)]}
-                            animDur = {Math.floor(Math.random() * 25)}
+                            animDur = {Math.floor(Math.random() * 30 + 15)}
                             size= {Math.floor(Math.random() * 500)}
                             src="https://i.imgur.com/kDDFvUp.png" 
                             alt="BackImg"/>

@@ -5,6 +5,10 @@ import style from './Home.module.css';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import { useDencrypt } from "use-dencrypt-effect";
+import Boop from '../../hooks/Boop/Boop.js';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -42,6 +46,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const titleText = [
+    "Hello!",
+    "My name is Jorge,",
+    "And I am a Software Developer"
+];
+const space = <p className={style.spaceP}> &nbsp;</p>;
+
 function HomeScreen (props) {
     const classes = useStyles();
     const values = ["C++", "C# - Unity", "React JS", "Assembly", "Phyton"];
@@ -62,15 +73,22 @@ function HomeScreen (props) {
     return <div>
         <div className={style.homeScreenTitle}>
             <div className={style.leftElements}>
-                <p className="TextWhite" data-aos="fade-right" data-aos-delay="0">
-                    Hello, 
-                </p>
-                <p className="TextWhite" data-aos="fade-left" data-aos-delay="0">
-                    My name is Jorge,
-                </p>
-                <p className="TextWhite" data-aos="fade-up" data-aos-delay="0">
-                    And I am a Software Developer
-                </p>
+                {
+                    titleText.map(element => {
+                        let innerElement = element.split("").map(letter => {
+                            if(letter == " "){
+                                return space;
+                            }else{
+                                return <Boop y={-20} scale={2} rotation={5}>
+                                    {letter}
+                                </Boop>;
+                            }
+                        })
+                        return <p className="TextWhite" data-aos="fade-right" data-aos-delay="0">
+                            {innerElement}
+                        </p>
+                    })
+                }
             </div>
             <div className={style.rightElements}>
                 <p className="TextWhite">
@@ -81,8 +99,6 @@ function HomeScreen (props) {
                 <Button
                     href="https://wa.me/5218781338974"
                     variant="contained"
-                    color="primary"
-                    size="large"
                     className={classes.button}
                     classes={{
                         root: classes.root,
@@ -96,8 +112,6 @@ function HomeScreen (props) {
                 <Button
                     href="mailto:jorge.eduardo.delatorre.maldonado@gmail.com"
                     variant="contained"
-                    color="primary"
-                    size="large"
                     className={classes.button}
                     classes={{
                         root: classes.root,
@@ -108,7 +122,6 @@ function HomeScreen (props) {
                 >
                     Contact
                 </Button>
-                
             </div>
         </div>
         <div className={style.ultimosProyectos}>

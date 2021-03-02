@@ -71,5 +71,11 @@
     transform: translate(0%, -50%);
 }
 
+.spaceP{
+    display: inline;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+}
 
 
