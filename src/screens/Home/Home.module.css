@@ -46,9 +46,17 @@
 .leftElements{
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 5%;
     transform: translate(0%, -50%);
     text-align: left;
+}
+
+.rightElements{
+    position: absolute;
+    top: 50%;
+    right: 7.5%;
+    font-size: 75px;
+    transform: translate(0%, -50%);
 }
 
 .leftElements p{
@@ -59,7 +67,7 @@
 .whatsappSection{
     position: absolute;
     top: 70%;
-    left: 10%;
+    left: 5%;
     transform: translate(0%, -50%);
 }
 
