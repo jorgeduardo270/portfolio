@@ -9,6 +9,7 @@ import Boop from '../../hooks/Boop/Boop.js';
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import NavBar from '../../components/NavBar/NavBar.js';
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -71,6 +72,7 @@ function HomeScreen (props) {
     }, []);
 
     return <div>
+        <NavBar ></NavBar>
         <div className={style.homeScreenTitle}>
             <div className={style.leftElements}>
                 {
@@ -84,9 +86,9 @@ function HomeScreen (props) {
                                 </Boop>;
                             }
                         })
-                        return <p className="TextWhite" data-aos="fade-right" data-aos-delay="0">
+                        return <div className="TextWhite" data-aos="fade-right" data-aos-delay="0">
                             {innerElement}
-                        </p>
+                        </div>
                     })
                 }
             </div>
