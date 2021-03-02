@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   font-family: 'RocknRoll One', sans-serif;
+  background-color: #00009cee;
+  z-index: -20;
 }
 
 .Background{
@@ -11,11 +13,11 @@
   color: #E06566;
 }
 
-.QueparBlue{
-  color: #286BB0FF;
+.TextBlue{
+  color: #00009c;
 }
 
-.QueparGrey{
+.TextWhite{
   color: #EFEFEF;
 }
 

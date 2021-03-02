@@ -45,18 +45,15 @@ function HomeScreen (props) {
 
     return <div>
         <div className={style.homeScreenTitle}>
-            <div className={style.homeLogo} >
-                <img src={LogoQuepar} alt="logoQuepar"/>
-            </div>
-            <div className={style.centerTitle}>
-                <p className="QueparRed" data-aos="fade-in" data-aos-delay="400">
-                    Desarrollamos software
+            <div className={style.leftElements}>
+                <p className="TextWhite" data-aos="fade-right" data-aos-delay="0">
+                    Hi, 
                 </p>
-                <p className="QueparBlack" data-aos="fade-in" data-aos-delay="1200">
-                    para que tú
+                <p className="TextWhite" data-aos="fade-left" data-aos-delay="0">
+                    I´m Jorge
                 </p>
-                <p className="QueparBlue" data-aos="fade-in" data-aos-delay="2000">
-                    transformes tu negocio
+                <p className="TextWhite" data-aos="fade-up" data-aos-delay="0">
+                    Software Developer
                 </p>
             </div>
             <div className={style.whatsappSection}>

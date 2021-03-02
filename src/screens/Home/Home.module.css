@@ -1,7 +1,7 @@
 .homeScreenTitle{
     height: 100vh;
     width: 100%;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
     position: relative;
 }
@@ -35,14 +35,23 @@
     height: auto;
 }
 
-.centerTitle{
+.centerElements{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: left;
 }
 
-.centerTitle p{
+.leftElements{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    text-align: left;
+}
+
+.leftElements p{
     margin: 0;
     padding: 0;
 }
@@ -50,8 +59,8 @@
 .whatsappSection{
     position: absolute;
     top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 10%;
+    transform: translate(0%, -50%);
 }
 
 
