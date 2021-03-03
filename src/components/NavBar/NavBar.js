@@ -75,7 +75,7 @@ export default function CenteredTabs() {
         sectionsNavBar.map(element => {
             return <Grid 
                     container item 
-                    sm={2} xs={12} 
+                    sm={4} md={2} 
                     spacing={5}  
                     alignContent = "center"
                     alignItems = "center"

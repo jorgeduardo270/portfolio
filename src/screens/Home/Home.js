@@ -5,11 +5,8 @@ import style from './Home.module.css';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import { useDencrypt } from "use-dencrypt-effect";
-import Boop from '../../hooks/Boop/Boop.js';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import NavBar from '../../components/NavBar/NavBar.js';
+import BoopText from '../../components/BoopText/BoopText.js';
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -47,12 +44,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const titleText = [
+const mainTitleText = [
     "Hello!",
     "My name is Jorge,",
     "And I am a Software Developer"
 ];
-const space = <p className={style.spaceP}> &nbsp;</p>;
+const aboutMeTitle = ["About me"];
 
 function HomeScreen (props) {
     const classes = useStyles();
@@ -75,22 +72,7 @@ function HomeScreen (props) {
         <NavBar ></NavBar>
         <div className={style.homeScreenTitle}>
             <div className={style.leftElements}>
-                {
-                    titleText.map(element => {
-                        let innerElement = element.split("").map(letter => {
-                            if(letter == " "){
-                                return space;
-                            }else{
-                                return <Boop y={-20} scale={2} rotation={5}>
-                                    {letter}
-                                </Boop>;
-                            }
-                        })
-                        return <div className="TextWhite" data-aos="fade-right" data-aos-delay="0">
-                            {innerElement}
-                        </div>
-                    })
-                }
+                <BoopText titleText={mainTitleText} fade="fade-right"/>
             </div>
             <div className={style.rightElements}>
                 <p className="TextWhite">
@@ -128,7 +110,7 @@ function HomeScreen (props) {
         </div>
         <div className={style.ultimosProyectos}>
             <p className="QueparBlack">
-                últimos proyectos
+                <BoopText titleText={aboutMeTitle} />
             </p>
         </div>
     </div>;
