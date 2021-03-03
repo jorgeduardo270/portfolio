@@ -109,9 +109,9 @@ function HomeScreen (props) {
             </div>
         </div>
         <div className={style.ultimosProyectos}>
-            <p className="QueparBlack">
+            <div className={style.aboutMeTitle}>
                 <BoopText titleText={aboutMeTitle} />
-            </p>
+            </div>
         </div>
     </div>;
 };

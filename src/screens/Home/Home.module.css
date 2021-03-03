@@ -6,16 +6,6 @@
     position: relative;
 }
 
-.ultimosProyectos{
-    margin-top: 5%;
-    padding-top: 5%;
-    height: 100vh;
-    width: 100%;
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
-}
-
 .homeScreen{
     height: 100vh;
     width: 100%;
@@ -71,6 +61,29 @@
     transform: translate(0%, -50%);
 }
 
+/*****/
+
+.ultimosProyectos{
+    margin-top: 5%;
+    padding-top: 5%;
+    height: 100vh;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.aboutMeTitle{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    font-size: 100px;
+}
+
+.aboutMeData{
+
+}
 
 
 

@@ -4,6 +4,7 @@ import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
 
 import Background from './components/Background/Background.js';
 import HomeScreen from './screens/Home/';
+import CertificatesScreen from './screens/Certificates';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Background>
           <Router>
               <Switch>
+                  <Route path="/certificates" component={CertificatesScreen} />
                   <Route path="/" component={HomeScreen} />
               </Switch>
           </Router>
