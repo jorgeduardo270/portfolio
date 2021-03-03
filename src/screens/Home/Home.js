@@ -81,7 +81,7 @@ function HomeScreen (props) {
             </div>
             <div className={style.whatsappSection}>
                 <Button
-                    href="https://wa.me/5218781338974"
+                    href="https://wa.me/5218781334204"
                     variant="contained"
                     className={classes.button}
                     classes={{

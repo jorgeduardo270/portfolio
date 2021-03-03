@@ -4,7 +4,6 @@ import {NavLink as RouterLink} from  "react-router-dom";
 import { Grid } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import AirplayIcon from '@material-ui/icons/Airplay';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import BookIcon from '@material-ui/icons/Book';
@@ -54,8 +53,8 @@ const sectionsNavBar = [
         icon: <BookIcon />,
     },
     {
-        text: "Resume",
-        url: "resume",
+        text: "About Me",
+        url: "",
         icon: <AssignmentIcon />,
     },
 ];
