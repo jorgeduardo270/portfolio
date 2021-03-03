@@ -5,6 +5,7 @@ import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
 import Background from './components/Background/Background.js';
 import HomeScreen from './screens/Home/';
 import CertificatesScreen from './screens/Certificates';
+import PorftolioScreen from './screens/Portfolio';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Router>
               <Switch>
                   <Route path="/certificates" component={CertificatesScreen} />
+                  <Route path="/projects" component={PorftolioScreen} />
                   <Route path="/" component={HomeScreen} />
               </Switch>
           </Router>
