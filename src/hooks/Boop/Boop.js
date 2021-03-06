@@ -14,6 +14,7 @@ const Boop = ({
     const style = useSpring({
         display: 'inline-block',
         backfaceVisibility: 'hidden',
+        zIndex: '10',
         transform: isBooped
         ? `translate(${x}px, ${y}px)
             rotate(${rotation}deg)

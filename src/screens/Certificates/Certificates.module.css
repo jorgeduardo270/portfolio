@@ -9,6 +9,7 @@
 .titleSection{
     position: absolute;
     top: 10%;
-    left: 5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
     font-size: 100px;
 }

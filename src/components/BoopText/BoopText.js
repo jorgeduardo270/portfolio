@@ -10,12 +10,12 @@ const BoopText = (props) => {
             if(letter == " "){
                 return space;
             }else{
-                return <Boop y={-20} scale={2} rotation={5}>
+                return <Boop y={-20} scale={2} rotation={5} className={style.boopLetter}>
                     {letter}
                 </Boop>;
             }
         })
-        return <div className="TextWhite" data-aos={props.fade || ""} data-aos-delay="500">
+        return <div className="TextWhite" key={element[0]} data-aos={props.fade || ""} data-aos-delay="500">
             {innerElement}
         </div>
     });

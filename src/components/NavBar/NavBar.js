@@ -43,9 +43,9 @@ const useStyles = makeStyles({
 
 const sectionsNavBar = [
     {
-        text: "Projects",
-        url: "projects",
-        icon: <AirplayIcon />,
+      text: "About Me",
+      url: "",
+      icon: <AssignmentIcon />,
     },
     {
         text: "Certificates",
@@ -53,9 +53,9 @@ const sectionsNavBar = [
         icon: <BookIcon />,
     },
     {
-        text: "About Me",
-        url: "",
-        icon: <AssignmentIcon />,
+      text: "Projects",
+      url: "projects",
+      icon: <AirplayIcon />,
     },
 ];
 
