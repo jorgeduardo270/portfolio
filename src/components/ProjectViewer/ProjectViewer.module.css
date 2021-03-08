@@ -2,15 +2,34 @@
     position: relative;
     width: inherit;
     height: inherit;
+    transition: all 0.5s linear;
 }
 
 .focusImage{
     max-height: 100%;
     max-width: 50%;
+    width: 50%;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translate(0, -50%);
+}
+
+.leftArrow{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 5;
+    color: #08FDD9;
+    transform: translate(0%, -50%);
+}
+
+.rightArrow{
+    position: absolute;
+    left: 48.75%;
+    top: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
 }
 
 .rightContent{
@@ -26,6 +45,15 @@
 .projectTitle{
     font-size: 25px;
     font-weight: 700;
+    margin-bottom: 5%;
+}
+
+.projectDescription{
+    min-height: 40%;
+}
+
+.projectLanguages{
+    margin-bottom: 5%;
 }
 
 .projectLink{

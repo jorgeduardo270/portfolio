@@ -7,8 +7,10 @@ import project2Sec from '../../images/certificates/others/Datastructure.jpg';
 export const projectsData = [
     {
         title: "Proyecto 1",
+        date: "2019",
         description: "Mucho bla ba asdhjkasdkjhakdjhkqwhdkjqwdhwd",
         link: "google.com",
+        languages: "C++, Python",
         images: [project1Main, project1Sec],
     },
     {
