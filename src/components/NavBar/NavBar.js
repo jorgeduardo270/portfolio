@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     color: "white",
   },
   icon: {
-    color: "#EFEFEF",
+    color: "#08FDD9",
     marginRight: "20%",
     transform: "scale(1.25)",
     paddingLeft: "0",
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     width: "150px",
   },
   butonLabel: {
-    color: "white !important",
+    color: "#08FDD9 !important",
     textDecoration: "none",
     textTransform: "none",
   },

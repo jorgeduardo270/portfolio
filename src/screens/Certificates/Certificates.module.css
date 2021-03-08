@@ -1,5 +1,6 @@
 .homeScreenTitle{
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     width: 100%;
     font-size: 50px;
     font-weight: 600;
@@ -8,8 +9,23 @@
 
 .titleSection{
     position: absolute;
-    top: 10%;
+    top: 10vh;
     left: 50%;
     transform: translate(-50%, 0%);
     font-size: 100px;
+}
+
+.certificatesData{
+    height: 100%;
+    min-height: 100vh;
+    min-width: 90vw;
+    padding-top: 30vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5vh;
+}
+
+.containedimage{
+    width: 100%;
+    height: auto;
 }

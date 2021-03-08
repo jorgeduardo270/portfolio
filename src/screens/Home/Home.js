@@ -82,7 +82,7 @@ const contactMeTitle = ["Contact me"];
 
 function HomeScreen (props) {
     const classes = useStyles();
-    const values = ["C++", "C# - Unity", "React JS", "Assembly", "Phyton"];
+    const values = ["C++", "C# - Unity", "React JS", "Assembly", "Phyton", "Matlab/Simulink"];
     const { result, dencrypt } = useDencrypt();
 
     useEffect(() => {
