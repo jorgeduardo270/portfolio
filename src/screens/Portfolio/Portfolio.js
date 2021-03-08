@@ -3,7 +3,7 @@ import BoopText from '../../components/BoopText/BoopText.js';
 import NavBar from '../../components/NavBar/NavBar.js';
 import style from './Portfolio.module.css';
 import ProjectViewer from '../../components/ProjectViewer/ProjectViewer.js';
-import {projectsData} from './Data.js';
+import {projectsData, otherProjectsData, webProjectsData} from './Data.js';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import GridList from '@material-ui/core/GridList';
@@ -67,6 +67,20 @@ const useStyles = makeStyles((theme) => ({
             cursor: "pointer",
         },
     },
+    gridListBar: {
+        backgroundColor: "#00009c79",
+        transition: "all 0.3s linear",
+    },
+    gridListBarSelected: {
+        backgroundColor: "#08fdd881",
+        color: "#00009c !important",
+        transition: "all 0.3s linear",
+    },
+    labelColor: {
+        color: "#00009c !important",
+        fontWeight: 700,
+        fontSize: "20px",
+    },
 }));
 
 function PortfolioScreen (props) {
@@ -89,8 +103,8 @@ function PortfolioScreen (props) {
 
             <div className={style.projectSectionsButtons}> 
                 <Button
-                    href="https://wa.me/5218781334204"
                     variant="contained"
+                    onClick = {() => setCurrProjectlist(projectsData)}
                     className={classes.button}
                     classes={{
                         root: classes.root,
@@ -102,9 +116,9 @@ function PortfolioScreen (props) {
                     C++
                 </Button>
                 <Button
-                    href="mailto:jorge.eduardo.delatorre.maldonado@gmail.com"
                     variant="contained"
                     className={classes.button}
+                    onClick = {() => setCurrProjectlist(webProjectsData)}
                     classes={{
                         root: classes.root,
                         label: classes.label, 
@@ -115,9 +129,9 @@ function PortfolioScreen (props) {
                     Web 
                 </Button>
                 <Button
-                    href="mailto:jorge.eduardo.delatorre.maldonado@gmail.com"
                     variant="contained"
                     className={classes.button}
+                    onClick = {() => setCurrProjectlist(otherProjectsData)}
                     classes={{
                         root: classes.root,
                         label: classes.label, 
@@ -146,8 +160,12 @@ function PortfolioScreen (props) {
                             className={classes.gridListItem}>
                             <img src={tile.images[0]} alt={tile.title} />
                             <GridListTileBar
+                            className={projectIndex === index ? classes.gridListBarSelected :  classes.gridListBar}
                             title={tile.title}
                             subtitle={<span>-{tile.date}</span>}
+                            classes={{
+                                title: projectIndex === index ? classes.labelColor : "",
+                            }}
                             actionIcon={
                                 <IconButton aria-label={`info about ${tile.title}`} className={classes.iconList}>
                                     <OpenInNewIcon />

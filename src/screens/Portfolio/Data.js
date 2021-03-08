@@ -32,7 +32,7 @@ export const projectsData = [
 
 export const otherProjectsData = [
     {
-        title: "Proyecto 1",
+        title: "Proyecto other 1",
         date: "2019",
         description: "Mucho bla ba asdhjkasdkjhakdjhkqwhdkjqwdhwd",
         link: "google.com",
