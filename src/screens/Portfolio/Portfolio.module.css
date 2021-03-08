@@ -15,7 +15,7 @@
 .projectSectionsButtons{
     position: absolute;
     left: 10%;
-    top: 15%;
+    top: 15vh;
 }
 
 .projectFocus{
@@ -25,5 +25,9 @@
     height: 50vh;
     width: 80vw;
     transform: translate(-50%, 0);
+}
 
+.projectsList{
+    margin-top: 90vh;
+    margin-bottom: 10vh;
 }

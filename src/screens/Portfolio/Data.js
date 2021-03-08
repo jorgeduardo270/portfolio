@@ -17,6 +17,13 @@ export const projectsData = [
     {
         title: "Proyecto 2",
         description: "Muchadsasdasdo blasda ba asdaasdhjkasdkjhakdjhkqwhdkjqwdhwd",
+        video: "",
+        link: "none",
+        images: [project2Main, project2Sec],
+    },
+    {
+        title: "Proyecto 3",
+        description: "Muchadsasdasdo blasda ba asdaasdhjkasdkjhakdjhkqwhdkjqwdhwd",
         video: "https://www.youtube.com/embed/jyARY9SZ0gs",
         link: "none",
         images: [project2Main, project2Sec],

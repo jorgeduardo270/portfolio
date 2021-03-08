@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
 
 function ProjectViewer (props) {
     const classes = useStyles();
-    const [projectImages, setProjectImages] = useState(props.project.images || []);
     const [imageIndex, setImageIndex] = useState(0);
     const [nextDisabled, setNextDisabled] = useState(false);
     const [prevDisabled, setPrevDisabled] = useState(true);

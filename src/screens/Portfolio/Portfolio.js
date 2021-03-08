@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import BoopText from '../../components/BoopText/BoopText.js';
 import NavBar from '../../components/NavBar/NavBar.js';
 import style from './Portfolio.module.css';
@@ -6,16 +6,16 @@ import ProjectViewer from '../../components/ProjectViewer/ProjectViewer.js';
 import {projectsData} from './Data.js';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import ImageList from '@material-ui/core/ImageList';
-import ImageListItem from '@material-ui/core/ImageListItem';
-import ImageListItemBar from '@material-ui/core/ImageListItemBar';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 import LanguageIcon from '@material-ui/icons/Language';
 import ComputerIcon from '@material-ui/icons/Computer';
 import MobileScreenShareIcon from '@material-ui/icons/MobileScreenShare';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 
 const portfolioTitle = ["Projects"];
 
@@ -49,10 +49,36 @@ const useStyles = makeStyles((theme) => ({
             transform: "scale(3)",
         },
     },
+    rootList: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        overflow: 'hidden',
+        backgroundColor: "transparent",
+    },
+    gridList: {
+        width: 1000,
+    },
+    iconList: {
+        color: '#08FDD9',
+    },
+    gridListItem: {
+        '&:hover': { 
+            cursor: "pointer",
+        },
+    },
 }));
 
 function PortfolioScreen (props) {
     const classes = useStyles();
+    const [projectIndex, setProjectIndex] = useState(0);
+    const [currProjectList, setCurrProjectlist] = useState(projectsData || []);
+
+    const setNewProjectIndex = (index) => {
+        if(index >= 0 && index < currProjectList.length){
+            setProjectIndex(index);
+        }
+    }
 
     return <div>
         <NavBar ></NavBar>
@@ -104,37 +130,34 @@ function PortfolioScreen (props) {
             </div>
 
             <div className={style.projectFocus}>
-                <ProjectViewer project={projectsData[0]}>
+                <ProjectViewer project={currProjectList[projectIndex]}>
                 </ProjectViewer>
             </div>
 
             <div className={style.projectsList}>
-                <ImageList className={classes.root}>
-                    <ImageListItem key="Subheader" cols={2}>
-                        <ListSubheader component="div">December</ListSubheader>
-                    </ImageListItem>
-                    {projectsData.map((item) => (
-                        <ImageListItem key={item.img}>
-                        <img
-                            srcSet={`${item.img}?w=248&fit=crop&auto=format 1x,
-                                ${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                            alt={item.title}
-                        />
-                        <ImageListItemBar
-                            title={item.title}
-                            subtitle={item.author}
+                <div className={classes.rootList}>
+                    <GridList cellHeight={300} className={classes.gridList}>
+                        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+                        </GridListTile>
+                        {currProjectList.map((tile, index) => (
+                        <GridListTile 
+                            onClick = {() => setNewProjectIndex(index)}
+                            key={tile.title} 
+                            className={classes.gridListItem}>
+                            <img src={tile.images[0]} alt={tile.title} />
+                            <GridListTileBar
+                            title={tile.title}
+                            subtitle={<span>-{tile.date}</span>}
                             actionIcon={
-                            <IconButton
-                                aria-label={`info about ${item.title}`}
-                                className={classes.icon}
-                            >
-                                <InfoIcon />
-                            </IconButton>
+                                <IconButton aria-label={`info about ${tile.title}`} className={classes.iconList}>
+                                    <OpenInNewIcon />
+                                </IconButton>
                             }
-                        />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
+                            />
+                        </GridListTile>
+                        ))}
+                    </GridList>
+                </div>
             </div>
         </div>
     </div>
