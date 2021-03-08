@@ -7,6 +7,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useDencrypt } from "use-dencrypt-effect";
 import NavBar from '../../components/NavBar/NavBar.js';
 import BoopText from '../../components/BoopText/BoopText.js';
+import { Chrono } from "react-chrono";
+import {aboutMeInfo} from './Data.js';
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -49,7 +51,10 @@ const mainTitleText = [
     "My name is Jorge,",
     "And I am a Software Developer"
 ];
+
 const aboutMeTitle = ["About me"];
+
+
 
 function HomeScreen (props) {
     const classes = useStyles();
@@ -73,44 +78,62 @@ function HomeScreen (props) {
         <div className={style.homeScreenTitle}>
             <div className={style.leftElements}>
                 <BoopText titleText={mainTitleText} fade="fade-right"/>
+                <div className={style.whatsappSection}>
+                    <Button
+                        href="https://wa.me/5218781334204"
+                        variant="contained"
+                        className={classes.button}
+                        classes={{
+                            root: classes.root,
+                            label: classes.label, 
+                            startIcon: classes.icon,
+                        }}
+                        startIcon={<WhatsAppIcon />}
+                    >
+                        Colaborate
+                    </Button>
+                    <Button
+                        href="mailto:jorge.eduardo.delatorre.maldonado@gmail.com"
+                        variant="contained"
+                        className={classes.button}
+                        classes={{
+                            root: classes.root,
+                            label: classes.labelMail, 
+                            startIcon: classes.icon,
+                        }}
+                        startIcon={<MailOutlineIcon />}
+                    >
+                        Contact
+                    </Button>
+                </div>
             </div>
             <div className={style.rightElements}>
                 <p className="TextWhite">
                     {result}
                 </p>
             </div>
-            <div className={style.whatsappSection}>
-                <Button
-                    href="https://wa.me/5218781334204"
-                    variant="contained"
-                    className={classes.button}
-                    classes={{
-                        root: classes.root,
-                        label: classes.label, 
-                        startIcon: classes.icon,
-                    }}
-                    startIcon={<WhatsAppIcon />}
-                >
-                    Colaborate
-                </Button>
-                <Button
-                    href="mailto:jorge.eduardo.delatorre.maldonado@gmail.com"
-                    variant="contained"
-                    className={classes.button}
-                    classes={{
-                        root: classes.root,
-                        label: classes.labelMail, 
-                        startIcon: classes.icon,
-                    }}
-                    startIcon={<MailOutlineIcon />}
-                >
-                    Contact
-                </Button>
-            </div>
         </div>
         <div className={style.ultimosProyectos}>
             <div className={style.aboutMeTitle}>
                 <BoopText titleText={aboutMeTitle} />
+            </div>
+            <div className={style.aboutMeData}>
+                <p>
+                As you can see, I am really passionate about what I do. 
+                <br/><br/>
+                During my career I started working in Hackathons and Entrepreneur challenges, and then jumped to startups and professional experience at big projects with big companies. 
+                <br/><br/>
+                My goal for the next years is to find a place to stay permanently and be able to get involved full time in a project where I can impact people and learn even more.  
+                </p>
+            </div>
+            <div className={style.aboutMeContent}> 
+                <div style={{ width: "100%", height: "100%" }}>
+                    <Chrono
+                        theme={{primary: "#08FDD9", secondary: "#00009c", cardBgColor: "none", cardForeColor: "#EFEFEF" }}
+                        items={aboutMeInfo}
+                        mode="VERTICAL"
+                    />
+                </div>
             </div>
         </div>
     </div>;

@@ -35,7 +35,7 @@
 
 .leftElements{
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 5%;
     transform: translate(0%, -50%);
     text-align: left;
@@ -55,10 +55,7 @@
 }
 
 .whatsappSection{
-    position: absolute;
-    top: 70%;
-    left: 5%;
-    transform: translate(0%, -50%);
+    margin-top: 5%;
 }
 
 /*****/
@@ -81,9 +78,26 @@
     font-size: 100px;
 }
 
-.aboutMeData{
-
+.aboutMeContent{
+    position: absolute;
+    left: 40%;
+    bottom: 5%;
+    width: 60vw;
+    height: 80vh;
 }
 
+.aboutMeContent section{
+    margin: 0  !important;
+}
 
+.aboutMeData {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 32vw;
+    height: 70vh;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+}
 
