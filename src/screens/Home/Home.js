@@ -9,10 +9,11 @@ import NavBar from '../../components/NavBar/NavBar.js';
 import BoopText from '../../components/BoopText/BoopText.js';
 import { Chrono } from "react-chrono";
 import {aboutMeInfo} from './Data.js';
+import { Element, Link } from "react-scroll";
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import LaunchIcon from '@material-ui/icons/Launch';
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -137,7 +138,7 @@ function HomeScreen (props) {
             </div>
         </div>
 
-        <div className={style.ultimosProyectos}>
+        <Element className={style.ultimosProyectos}  name="aboutMeSection">
             <div className={style.aboutMeTitle}>
                 <BoopText titleText={aboutMeTitle} />
             </div>
@@ -159,37 +160,76 @@ function HomeScreen (props) {
                     />
                 </div>
             </div>
-        </div>
+        </Element>
+
+        <Element className={style.ultimosProyectos} name="contactMeSection">
+            <div className={style.aboutMeTitle}>
+                <BoopText titleText={aboutMeTitle} />
+            </div>
+            <div className={style.aboutMeData}>
+                <p>
+                As you can see, I am really passionate about what I do. 
+                <br/><br/>
+                During my career I started working in Hackathons and Entrepreneur challenges, and then jumped to startups and professional experience at big projects with big companies. 
+                <br/><br/>
+                My goal for the next years is to find a place to stay permanently and be able to get involved full time in a project where I can impact people and learn even more.  
+                </p>
+            </div>
+            <div className={style.aboutMeContent}> 
+                <div style={{ width: "100%", height: "100%" }}>
+                    <Chrono
+                        theme={{primary: "#08FDD9", secondary: "#00009c", cardBgColor: "none", cardForeColor: "#EFEFEF" }}
+                        items={aboutMeInfo}
+                        mode="VERTICAL"
+                    />
+                </div>
+            </div>
+        </Element>
 
         <div className={style.stickyLeftButton}>
-            <Button
-                href="https://wa.me/5218781334204"
-                variant="contained"
-                className={classes.stickyButton}
-                classes={{
-                    root: classes.root,
-                    label: classes.labelSticky, 
-                    startIcon: classes.iconSticky,
-                }}
-                startIcon={<ArrowDownwardIcon />}
+            <Link
+                to="aboutMeSection"
+                spy={true}
+                smooth={true}
+                duration={500}
             >
-                About Me
-            </Button>
+                <Button
+                    variant="contained"
+                    className={classes.stickyButton}
+                    classes={{
+                        root: classes.root,
+                        label: classes.labelSticky, 
+                        startIcon: classes.iconSticky,
+                    }}
+                    startIcon={<LaunchIcon />}
+                >
+    
+                        About Me
+                </Button>
+            </Link>
         </div>
+
         <div className={style.stickyRightButton}>
-            <Button
-                href="https://wa.me/5218781334204"
-                variant="contained"
-                className={classes.stickyButton}
-                classes={{
-                    root: classes.root,
-                    label: classes.labelSticky, 
-                    startIcon: classes.iconSticky,
-                }}
-                startIcon={<ArrowDownwardIcon />}
+            <Link
+                to="contactMeSection"
+                spy={true}
+                smooth={true}
+                duration={500}
             >
-                Contact Me
-            </Button>
+                <Button
+                    variant="contained"
+                    className={classes.stickyButton}
+                    classes={{
+                        root: classes.root,
+                        label: classes.labelSticky, 
+                        startIcon: classes.iconSticky,
+                    }}
+                    startIcon={<LaunchIcon />}
+                >
+                    
+                        Contact Me
+                </Button>
+            </Link>
         </div>
     </div>;
 };

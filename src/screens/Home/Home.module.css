@@ -61,8 +61,6 @@
 /*****/
 
 .ultimosProyectos{
-    margin-top: 5%;
-    padding-top: 5%;
     height: auto;
     min-height: 100vh;
     width: 100%;
@@ -70,11 +68,12 @@
     font-weight: 600;
     text-align: center;
     position: relative;
+    margin-top: 5%;
 }
 
 .aboutMeTitle{
     position: absolute;
-    top: 15%;
+    top: 5%;
     left: 5%;
     font-size: 100px;
 }
@@ -82,7 +81,7 @@
 .aboutMeContent{
     position: absolute;
     left: 40%;
-    bottom: 5%;
+    bottom: 10%;
     width: 60vw;
     height: 80vh;
 }
@@ -98,7 +97,7 @@
     text-align: left;
     font-size: 30px;
     color: white;
-    padding-top: 25vh;
+    padding-top: 20vh;
     padding-bottom: 5%;
     padding-left: 5%;
 }
