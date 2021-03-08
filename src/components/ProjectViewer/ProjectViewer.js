@@ -25,10 +25,12 @@ function ProjectViewer (props) {
     const [imageIndex, setImageIndex] = useState(0);
     const [nextDisabled, setNextDisabled] = useState(false);
     const [prevDisabled, setPrevDisabled] = useState(true);
+    const maxIndexAllwd = props.project?.video !== "" ? props.project?.images?.length : props.project?.images?.length - 1;
+    const hasVideo = props.project?.video !== "";
 
     const nextImage = () => {
         let newIndex = imageIndex + 1;
-        if(newIndex < props.project?.images?.length){
+        if(newIndex <= maxIndexAllwd){
             setImageIndex(newIndex);
             enableDisableArrows(newIndex);
         }
@@ -48,7 +50,7 @@ function ProjectViewer (props) {
         else
             setPrevDisabled(false);
 
-        if(newIndex >= props.project.images.length - 1)
+        if(newIndex === maxIndexAllwd)
             setNextDisabled(true);
         else
             setNextDisabled(false);
@@ -66,11 +68,21 @@ function ProjectViewer (props) {
                         className={classes.icon}/>
                 }
             </div>
-            <img 
+            {
+                hasVideo && imageIndex === 0 && 
+                <iframe 
+                    className={style.focusVideo}
+                    src={props.project?.video || "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
+                </iframe>
+            }
+            {
+                (!hasVideo ||  (hasVideo && imageIndex !== 0))&& 
+                <img 
+                    alt={props.title} 
+                    src={props.project.images[hasVideo ? imageIndex - 1 : imageIndex]} 
+                    className={style.focusImage}/>
+            }
 
-                alt={props.title} 
-                src={props.project.images[imageIndex]} 
-                className={style.focusImage}/>
             <div className={style.rightArrow}>
                 {
                     !nextDisabled && 

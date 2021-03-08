@@ -9,7 +9,7 @@ import Thinking from '../../images/certificates/math/Thinking.PNG';
 
 import Morec from '../../images/certificates/unity/Morec.PNG';
 import Oop from '../../images/certificates/unity/Oop.PNG';
-import SpecializationUnity from '../../images/certificates/unity/Morec.PNG';
+import SpecializationUnity from '../../images/certificates/unity/Specialization.PNG';
 import Structures from '../../images/certificates/unity/Structures.PNG';
 import Unity from '../../images/certificates/unity/Unity.PNG';
 

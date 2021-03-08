@@ -12,6 +12,12 @@
     font-size: 100px;
 }
 
+.projectSectionsButtons{
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+
 .projectFocus{
     position: absolute;
     left: 50%;
@@ -19,4 +25,5 @@
     height: 50vh;
     width: 80vw;
     transform: translate(-50%, 0);
+
 }

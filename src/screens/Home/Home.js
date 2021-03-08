@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
         color: "#EFEFEF",
         marginRight: "20%",
         marginLeft: "5%",
-        transform: "scale(1.5)",
+        transform: "scale(2)",
         paddingLeft: "0",
     },
     stickyButton: {
