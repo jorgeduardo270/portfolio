@@ -99,7 +99,7 @@ function HomeScreen (props) {
 
     return <div>
         <NavBar ></NavBar>
-        <div className={style.homeScreenTitle}>
+        <Element className={style.homeScreenTitle} name="contactMeSection">
             <div className={style.leftElements}>
                 <BoopText titleText={mainTitleText} fade="fade-right"/>
                 <div className={style.whatsappSection}>
@@ -136,7 +136,7 @@ function HomeScreen (props) {
                     {result}
                 </p>
             </div>
-        </div>
+        </Element>
 
         <Element className={style.ultimosProyectos}  name="aboutMeSection">
             <div className={style.aboutMeTitle}>
@@ -162,31 +162,7 @@ function HomeScreen (props) {
             </div>
         </Element>
 
-        <Element className={style.ultimosProyectos} name="contactMeSection">
-            <div className={style.aboutMeTitle}>
-                <BoopText titleText={aboutMeTitle} />
-            </div>
-            <div className={style.aboutMeData}>
-                <p>
-                As you can see, I am really passionate about what I do. 
-                <br/><br/>
-                During my career I started working in Hackathons and Entrepreneur challenges, and then jumped to startups and professional experience at big projects with big companies. 
-                <br/><br/>
-                My goal for the next years is to find a place to stay permanently and be able to get involved full time in a project where I can impact people and learn even more.  
-                </p>
-            </div>
-            <div className={style.aboutMeContent}> 
-                <div style={{ width: "100%", height: "100%" }}>
-                    <Chrono
-                        theme={{primary: "#08FDD9", secondary: "#00009c", cardBgColor: "none", cardForeColor: "#EFEFEF" }}
-                        items={aboutMeInfo}
-                        mode="VERTICAL"
-                    />
-                </div>
-            </div>
-        </Element>
-
-        <div className={style.stickyLeftButton}>
+        <div className={style.stickyRightButton}>
             <Link
                 to="aboutMeSection"
                 spy={true}
@@ -209,7 +185,7 @@ function HomeScreen (props) {
             </Link>
         </div>
 
-        <div className={style.stickyRightButton}>
+        <div className={style.stickyLeftButton}>
             <Link
                 to="contactMeSection"
                 spy={true}
