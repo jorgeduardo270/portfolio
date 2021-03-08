@@ -43,7 +43,7 @@ const useStyles = makeStyles({
 
 const sectionsNavBar = [
     {
-      text: "About Me",
+      text: "Home",
       url: "",
       icon: <AssignmentIcon />,
     },

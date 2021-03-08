@@ -63,7 +63,8 @@
 .ultimosProyectos{
     margin-top: 5%;
     padding-top: 5%;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     width: 100%;
     font-size: 40px;
     font-weight: 600;
@@ -91,13 +92,40 @@
 }
 
 .aboutMeData {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-    width: 32vw;
-    height: 70vh;
+    max-width: 35%;
+    min-height: 70vh;
+    height: 100%;
     text-align: left;
     font-size: 30px;
     color: white;
+    padding-top: 25vh;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+.stickyRightButton {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    z-index: 1;
+}
+
+.stickyLeftButton {
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    z-index: 1;
+}
+
+.contactMeScreen{
+    margin-top: 5%;
+    padding-top: 5%;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
 }
 

@@ -12,6 +12,7 @@ import {aboutMeInfo} from './Data.js';
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -44,6 +45,28 @@ const useStyles = makeStyles((theme) => ({
         transform: "scale(1.5)",
         paddingLeft: "0",
     },
+    stickyButton: {
+        width: "175px",
+        height: "70px",
+        backgroundColor: "transparent",
+        textTransform: "none",
+        fontWeight: "600",
+        borderRadius: "20px",
+        '&:hover': { 
+            backgroundColor: "#286BB0FF",
+        },
+    },
+    labelSticky: {
+        color: "#08FDD9",
+        padding: "0",
+    },
+    iconSticky: {
+        color: "#08FDD9",
+        marginRight: "20%",
+        marginLeft: "5%",
+        transform: "scale(1.5)",
+        paddingLeft: "0",
+    },
 }));
 
 const mainTitleText = [
@@ -54,7 +77,7 @@ const mainTitleText = [
 
 const aboutMeTitle = ["About me"];
 
-
+const contactMeTitle = ["Contact me"];
 
 function HomeScreen (props) {
     const classes = useStyles();
@@ -90,7 +113,7 @@ function HomeScreen (props) {
                         }}
                         startIcon={<WhatsAppIcon />}
                     >
-                        Colaborate
+                        Phone
                     </Button>
                     <Button
                         href="mailto:jorge.eduardo.delatorre.maldonado@gmail.com"
@@ -103,7 +126,7 @@ function HomeScreen (props) {
                         }}
                         startIcon={<MailOutlineIcon />}
                     >
-                        Contact
+                        Mail 
                     </Button>
                 </div>
             </div>
@@ -113,6 +136,7 @@ function HomeScreen (props) {
                 </p>
             </div>
         </div>
+
         <div className={style.ultimosProyectos}>
             <div className={style.aboutMeTitle}>
                 <BoopText titleText={aboutMeTitle} />
@@ -135,6 +159,37 @@ function HomeScreen (props) {
                     />
                 </div>
             </div>
+        </div>
+
+        <div className={style.stickyLeftButton}>
+            <Button
+                href="https://wa.me/5218781334204"
+                variant="contained"
+                className={classes.stickyButton}
+                classes={{
+                    root: classes.root,
+                    label: classes.labelSticky, 
+                    startIcon: classes.iconSticky,
+                }}
+                startIcon={<ArrowDownwardIcon />}
+            >
+                About Me
+            </Button>
+        </div>
+        <div className={style.stickyRightButton}>
+            <Button
+                href="https://wa.me/5218781334204"
+                variant="contained"
+                className={classes.stickyButton}
+                classes={{
+                    root: classes.root,
+                    label: classes.labelSticky, 
+                    startIcon: classes.iconSticky,
+                }}
+                startIcon={<ArrowDownwardIcon />}
+            >
+                Contact Me
+            </Button>
         </div>
     </div>;
 };
