@@ -58,6 +58,25 @@
     margin-top: 5%;
 }
 
+.bottomElements{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+.littleElement{
+    font-size: 20px;
+    color: #08FDD9;
+    background-color: #00009c73;
+    min-width: 100px;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 /*****/
 
 .ultimosProyectos{
@@ -95,7 +114,7 @@
     min-height: 70vh;
     height: 100%;
     text-align: left;
-    font-size: 30px;
+    font-size: 25px;
     color: white;
     padding-top: 20vh;
     padding-bottom: 5%;

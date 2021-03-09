@@ -10,6 +10,7 @@ import BoopText from '../../components/BoopText/BoopText.js';
 import { Chrono } from "react-chrono";
 import {aboutMeInfo} from './Data.js';
 import { Element, Link } from "react-scroll";
+import Grid from '@material-ui/core/Grid';
 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -68,17 +69,22 @@ const useStyles = makeStyles((theme) => ({
         transform: "scale(1.5)",
         paddingLeft: "0",
     },
+    listSection: {
+        marginTop: "50px",
+    }
 }));
-
 const mainTitleText = [
     "Hello!",
     "My name is Jorge,",
     "And I am a Software Developer"
 ];
-
 const aboutMeTitle = ["About me"];
-
 const contactMeTitle = ["Contact me"];
+const itemList = [
+    ["C++", "C# - Unity", "React JS", "Phyton", "Matlab/Simulink"],
+    ["Git", "SVN", "Jenkins", "Unit testing", "SIL", "MIL", "HIL"],
+    ["Assembly", "VHDL", "Verilog", "Javascript", "PHP"],
+];
 
 function HomeScreen (props) {
     const classes = useStyles();
@@ -136,6 +142,32 @@ function HomeScreen (props) {
                     {result}
                 </p>
             </div>
+            <div className={style.bottomElements}>
+                {   
+                    itemList.map(section => {
+                        return <Grid container 
+                            className={classes.listSection}
+                            key={section[0]}
+                            alignContent="center"
+                            alignItems="center"
+                            justify="center"
+                            spacing={1} 
+                            direction="row">
+                            {section.map(element=> {
+                                return <Grid container item xs={1} spacing={5} key={element}>
+                                    <p className={style.littleElement}>
+                                        {element}
+                                    </p>
+                                </Grid>
+                            })
+                            }
+                        </Grid>
+                    })
+                }
+                
+            </div>
+            
+
         </Element>
 
         <Element className={style.ultimosProyectos}  name="aboutMeSection">
@@ -145,6 +177,8 @@ function HomeScreen (props) {
             <div className={style.aboutMeData}>
                 <p>
                 As you can see, I am really passionate about what I do. 
+                <br/><br/>
+                My main areas of expertise are C++, C# and React. I also have experience in all the languages, tools and processes mentioned above. 
                 <br/><br/>
                 During my career I started working in Hackathons and Entrepreneur challenges, and then jumped to startups and professional experience at big projects with big companies. 
                 <br/><br/>
