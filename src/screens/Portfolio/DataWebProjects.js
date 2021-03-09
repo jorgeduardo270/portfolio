@@ -1,9 +1,11 @@
 import project1Main from '../../images/certificates/math/Cryptography.PNG';
 import project1Sec from '../../images/certificates/math/Delivery.PNG';
-
 import project2Main from '../../images/certificates/others/BeginnersAI.jpg';
 import project2Sec from '../../images/certificates/others/Datastructure.jpg';
 
+import portfolio1 from '../../images/evidences/web/portfolio/Main.PNG';
+import portfolio2 from '../../images/evidences/web/portfolio/AboutMe.PNG';
+import portfolio3 from '../../images/evidences/web/portfolio/Prjojects.PNG';
 
 export const webProjectsData = [
     {
@@ -13,7 +15,7 @@ export const webProjectsData = [
         link: "google.com",
         video: "",
         languages: "React JS",
-        images: [project1Main, project1Sec],
+        images: [portfolio1, portfolio2, portfolio3],
     },
     {
         title: "Proyecto web 2",

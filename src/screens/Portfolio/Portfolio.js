@@ -156,7 +156,7 @@ function PortfolioScreen (props) {
                     }}
                     startIcon={<ComputerIcon />}
                 >
-                    C++
+                    Main
                 </Button>
                 <Button
                     variant="contained"
