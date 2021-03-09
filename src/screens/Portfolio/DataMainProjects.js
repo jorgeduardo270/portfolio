@@ -33,7 +33,7 @@ export const projectsData = [
     {
         title: "Wacky Breackout",
         description: "As part of an Object-Oriented course I developed this game to practice this theory. This is a breakout that has different power ups and no difficulty since I just spawn balls in front of the player so he can create a mess without the worry of missing a shot. ",
-        video: "",
+        video: "https://www.youtube.com/embed/PNBLatO85yc",
         link: "",
         languages: "C#",
         images: [project2Main, project2Sec],
