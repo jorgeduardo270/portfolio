@@ -56,7 +56,7 @@ function Background (props){
     let body = []
     for(var i=0; i<27; i++){
         body.push(  <ImageContainer 
-                        key= {Math.floor(Math.random() * 10000)}
+                        key= {i}
                         className="slowerScroll Background"
                         bottom= {Math.floor(Math.random() * 100)}
                         left=   {Math.floor(Math.random() * 100) -5}

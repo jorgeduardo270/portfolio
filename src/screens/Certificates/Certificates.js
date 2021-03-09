@@ -44,7 +44,7 @@ function CertificatesScreen (props) {
             </div>
 
             <div className={style.certificatesData}>
-                <GridList cellHeight={"50%"} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={500} spacing={5} className={classes.gridList}>
                     {tileData.map((tile) => (
                     <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
@@ -52,7 +52,7 @@ function CertificatesScreen (props) {
                     ))}
                 </GridList>
 
-                <GridList cellHeight={"20vh"} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={500} spacing={5} className={classes.gridList}>
                     {tileDataUnity.map((tile) => (
                     <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
@@ -60,7 +60,7 @@ function CertificatesScreen (props) {
                     ))}
                 </GridList>
 
-                <GridList cellHeight={"20vh"} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={500} spacing={5} className={classes.gridList}>
                     {tileDataGame.map((tile) => (
                     <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
@@ -68,7 +68,7 @@ function CertificatesScreen (props) {
                     ))}
                 </GridList>
 
-                <GridList cellHeight={"20vh"} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={500} spacing={5} className={classes.gridList}>
                     {tileDataOthers.map((tile) => (
                     <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>

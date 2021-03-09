@@ -76,6 +76,7 @@ function ProjectViewer (props) {
             {
                 hasVideo && imageIndex === 0 && 
                 <iframe 
+                    title={props?.project?.title}
                     className={style.focusVideo}
                     src={props?.project?.video || "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
                 </iframe>

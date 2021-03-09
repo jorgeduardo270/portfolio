@@ -3,14 +3,21 @@ import style from './BoopText.module.css';
 import Boop from '../../hooks/Boop/Boop.js';
 
 const BoopText = (props) => {
-    const space = <p className={style.spaceP}> &nbsp;</p>;
-
     let ElementToDisp = props.titleText?.map(element => {
-        let innerElement = element.split("").map(letter => {
+        let innerElement = element.split("").map((letter, index) => {
             if(letter == " "){
-                return space;
+                return <p 
+                    className={style.spaceP} 
+                    key={index}> 
+                    &nbsp;
+                </p>;
             }else{
-                return <Boop y={-20} scale={2} rotation={5} className={style.boopLetter}>
+                return <Boop 
+                            key={index + letter}
+                            y={-20} 
+                            scale={2} 
+                            rotation={5} 
+                            className={style.boopLetter}>
                     {letter}
                 </Boop>;
             }
