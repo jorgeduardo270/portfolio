@@ -3,12 +3,13 @@ import BoopText from '../../components/BoopText/BoopText.js';
 import NavBar from '../../components/NavBar/NavBar.js';
 import style from './Portfolio.module.css';
 import ProjectViewer from '../../components/ProjectViewer/ProjectViewer.js';
-import {projectsData, otherProjectsData, webProjectsData} from './Data.js';
+import {projectsData} from './DataMainProjects.js';
+import {otherProjectsData} from './DataOtherProjects.js';
+import {webProjectsData} from './DataWebProjects.js';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 
@@ -18,7 +19,7 @@ import MobileScreenShareIcon from '@material-ui/icons/MobileScreenShare';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import { Element, Link } from "react-scroll";
+
 
 const portfolioTitle = ["Projects"];
 
