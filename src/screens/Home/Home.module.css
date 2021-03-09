@@ -1,0 +1,149 @@
+.homeScreenTitle{
+    height: 100vh;
+    width: 100%;
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+}
+
+.homeScreen{
+    height: 100vh;
+    width: 100%;
+    font-size: 40px;
+}
+
+.homeLogo{
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    right: 5%;
+    top: 0%;
+}
+
+.homeLogo img{
+    width: 100%;
+    height: auto;
+}
+
+.centerElements{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.leftElements{
+    position: absolute;
+    top: 47%;
+    left: 5%;
+    transform: translate(0%, -50%);
+    text-align: left;
+}
+
+.rightElements{
+    position: absolute;
+    top: 50%;
+    right: 7.5%;
+    font-size: 75px;
+    transform: translate(0%, -50%);
+}
+
+.leftElements p{
+    margin: 0;
+    padding: 0;
+}
+
+.whatsappSection{
+    margin-top: 5%;
+}
+
+.bottomElements{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+.littleElement{
+    font-size: 20px;
+    color: #08FDD9;
+    background-color: #00009c73;
+    min-width: 100px;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+/*****/
+
+.ultimosProyectos{
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    margin-top: 5%;
+}
+
+.aboutMeTitle{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 100px;
+}
+
+.aboutMeContent{
+    position: absolute;
+    left: 40%;
+    bottom: 10%;
+    width: 60vw;
+    height: 80vh;
+}
+
+.aboutMeContent section{
+    margin: 0  !important;
+}
+
+.aboutMeData {
+    max-width: 35%;
+    min-height: 70vh;
+    height: 100%;
+    text-align: left;
+    font-size: 25px;
+    color: white;
+    padding-top: 20vh;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+.stickyRightButton {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    z-index: 1;
+}
+
+.stickyLeftButton {
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    z-index: 1;
+}
+
+.contactMeScreen{
+    margin-top: 5%;
+    padding-top: 5%;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+

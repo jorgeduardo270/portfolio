@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  font-family: 'RocknRoll One', sans-serif !important;
+  background-color: #00009cee;
+  z-index: -20;
+}
+
+.Background{
+  z-index: -1;
+}
+
+.QueparRed{
+  color: #E06566;
+}
+
+.TextBlue{
+  color: #00009c73;
+}
+
+.TextWhite{
+  color: #EFEFEF;
+}
+
+.SecondaryColor{
+  color: #08FDD9;
+}
