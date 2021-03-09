@@ -18,6 +18,7 @@ import MobileScreenShareIcon from '@material-ui/icons/MobileScreenShare';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import { Element, Link } from "react-scroll";
 
 const portfolioTitle = ["Projects"];
 
@@ -101,8 +102,10 @@ function PortfolioScreen (props) {
     const classes = useStyles();
     const [projectIndex, setProjectIndex] = useState(0);
     const [currProjectList, setCurrProjectlist] = useState(projectsData || []);
+    var focusSection = document.getElementById("ProjectFocusSection") || "";
 
     useEffect(() => {
+        focusSection = document.getElementById("ProjectFocusSection");
         setProjectIndex(0);
     },[currProjectList]);
 
@@ -126,6 +129,11 @@ function PortfolioScreen (props) {
             newIndex = currProjectList.length - 1;
         }
         setProjectIndex(newIndex);
+    };
+
+    const onProjectClick = (index) => {
+        focusSection.scrollIntoView({block: "end", behavior: "smooth"});
+        setNewProjectIndex(index);
     };
 
     return <div>
@@ -182,10 +190,12 @@ function PortfolioScreen (props) {
                     onClick = {() => prevProject()}
                     className={classes.iconArrows}/>
             </div>
-            <div className={style.projectFocus}>
+
+            <div className={style.projectFocus} id="ProjectFocusSection">
                 <ProjectViewer project={currProjectList[projectIndex]}>
                 </ProjectViewer>
             </div>
+
             <div className={style.rightProjectArrow}>
                 <ArrowForwardIosIcon 
                     onClick = {() => nextProject()}
@@ -199,7 +209,7 @@ function PortfolioScreen (props) {
                         </GridListTile>
                         {currProjectList.map((tile, index) => (
                         <GridListTile 
-                            onClick = {() => setNewProjectIndex(index)}
+                            onClick = {() => onProjectClick(index)}
                             key={tile.title} 
                             className={classes.gridListItem}>
                             <img src={tile.images[0]} alt={tile.title} />

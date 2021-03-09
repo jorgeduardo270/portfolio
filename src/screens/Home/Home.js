@@ -164,10 +164,7 @@ function HomeScreen (props) {
                         </Grid>
                     })
                 }
-                
             </div>
-            
-
         </Element>
 
         <Element className={style.ultimosProyectos}  name="aboutMeSection">
