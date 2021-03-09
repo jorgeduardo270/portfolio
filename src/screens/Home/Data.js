@@ -25,6 +25,11 @@ export const aboutMeInfo = [
     },
     {
         title: "2018",
+        cardTitle: "Graduation - Tecnológico de Monterrey",
+        cardSubtitle: "Graduated with a Batchelor´s degree of Computer Engineering (Digital Systems and Robotics)",
+    },
+    {
+        title: "2018",
         cardTitle: "HackMty",
         cardSubtitle: "First Place in the categories Autorize.net and Algolia with the bes development using their API's",
     },
