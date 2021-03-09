@@ -16,6 +16,8 @@ import LanguageIcon from '@material-ui/icons/Language';
 import ComputerIcon from '@material-ui/icons/Computer';
 import MobileScreenShareIcon from '@material-ui/icons/MobileScreenShare';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const portfolioTitle = ["Projects"];
 
@@ -81,6 +83,18 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: 700,
         fontSize: "20px",
     },
+    iconArrows: {
+        width: "150px",
+        height: "175px",
+        color: "#08fdd831",
+        textAlign: "center",
+        transition: "all 0.3s linear",
+        zIndex: 20,
+        '&:hover': { 
+            color: "#08FDD9",
+            cursor: "pointer",
+        },
+    },
 }));
 
 function PortfolioScreen (props) {
@@ -93,6 +107,22 @@ function PortfolioScreen (props) {
             setProjectIndex(index);
         }
     }
+
+    const nextProject = () => {
+        let newIndex = projectIndex + 1;
+        if(newIndex >= currProjectList.length){
+            newIndex = 0;
+        }
+        setProjectIndex(newIndex);
+    };
+
+    const prevProject = () => {
+        let newIndex = projectIndex - 1;
+        if(newIndex < 0){
+            newIndex = currProjectList.length - 1;
+        }
+        setProjectIndex(newIndex);
+    };
 
     return <div>
         <NavBar ></NavBar>
@@ -143,9 +173,19 @@ function PortfolioScreen (props) {
                 </Button>
             </div>
 
+            <div className={style.leftProjectArrow}>
+                <ArrowBackIosIcon  
+                    onClick = {() => prevProject()}
+                    className={classes.iconArrows}/>
+            </div>
             <div className={style.projectFocus}>
                 <ProjectViewer project={currProjectList[projectIndex]}>
                 </ProjectViewer>
+            </div>
+            <div className={style.rightProjectArrow}>
+                <ArrowForwardIosIcon 
+                    onClick = {() => nextProject()}
+                    className={classes.iconArrows}/>
             </div>
 
             <div className={style.projectsList}>

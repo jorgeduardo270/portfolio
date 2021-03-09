@@ -31,3 +31,17 @@
     margin-top: 90vh;
     margin-bottom: 10vh;
 }
+
+.leftProjectArrow{
+    z-index: 20;
+    position: absolute;
+    left: 2%;
+    top: 45vh;
+}
+
+.rightProjectArrow{
+    z-index: 20;
+    position: absolute;
+    right: 2%;
+    top: 45vh;
+}
