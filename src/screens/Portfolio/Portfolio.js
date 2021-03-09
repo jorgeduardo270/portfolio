@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import BoopText from '../../components/BoopText/BoopText.js';
 import NavBar from '../../components/NavBar/NavBar.js';
 import style from './Portfolio.module.css';
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "transparent",
     },
     gridList: {
-        width: 1000,
+        width: 1200,
     },
     iconList: {
         color: '#08FDD9',
@@ -101,6 +101,10 @@ function PortfolioScreen (props) {
     const classes = useStyles();
     const [projectIndex, setProjectIndex] = useState(0);
     const [currProjectList, setCurrProjectlist] = useState(projectsData || []);
+
+    useEffect(() => {
+        setProjectIndex(0);
+    },[currProjectList]);
 
     const setNewProjectIndex = (index) => {
         if(index >= 0 && index < currProjectList.length){

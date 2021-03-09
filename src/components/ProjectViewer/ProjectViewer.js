@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState, useEffect }  from 'react';
 import style from './ProjectViewer.module.css';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -26,6 +26,12 @@ function ProjectViewer (props) {
     const [prevDisabled, setPrevDisabled] = useState(true);
     const maxIndexAllwd = props.project?.video !== "" ? props.project?.images?.length : props.project?.images?.length - 1;
     const hasVideo = props.project?.video !== "";
+
+    useEffect(() => {
+        setNextDisabled(false);
+        setPrevDisabled(true);
+        setImageIndex(0);
+    },[props]);
 
     const nextImage = () => {
         let newIndex = imageIndex + 1;
@@ -71,14 +77,14 @@ function ProjectViewer (props) {
                 hasVideo && imageIndex === 0 && 
                 <iframe 
                     className={style.focusVideo}
-                    src={props.project?.video || "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
+                    src={props?.project?.video || "https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
                 </iframe>
             }
             {
                 (!hasVideo ||  (hasVideo && imageIndex !== 0))&& 
                 <img 
-                    alt={props.title} 
-                    src={props.project.images[hasVideo ? imageIndex - 1 : imageIndex]} 
+                    alt={props?.title || ""} 
+                    src={props?.project?.images[hasVideo ? imageIndex - 1 : imageIndex] || ""} 
                     className={style.focusImage}/>
             }
 
@@ -94,19 +100,19 @@ function ProjectViewer (props) {
             <div className={style.rightContent}>
                 
                 <p className={style.projectTitle}>
-                    {props.project.title}
+                    {props?.project?.title || ""}
                 </p>
                 <p className={style.proyectDate}>
-                    Year: {props.project.date}
+                    Year: {props?.project?.date || ""}
                 </p>
                 <p className={style.projectDescription}>
-                    Description: <br/> {props.project.description}
+                    Description: <br/> {props?.project?.description || ""}
                 </p>
                 <p className={style.projectLanguages}>
-                    Languages: <br/> {props.project.languages}
+                    Languages: <br/> {props?.project?.languages || ""}
                 </p>
-                <a href={props.project.link} className={style.projectLink}>
-                    Link: {props.project.link}
+                <a href={props?.project?.link || ""} className={style.projectLink}>
+                    Link: {props?.project?.link || ""}
                 </a>
 
             </div>
