@@ -6,7 +6,7 @@ const Boop = ({
     y = 0,
     rotation = 0,
     scale = 1,
-    timing = 150,
+    timing = 100,
     children, 
 }) => {
     const [isBooped, setIsBooped] = React.useState(false);
@@ -22,6 +22,7 @@ const Boop = ({
         : `translate(0px, 0px)
             rotate(0deg)
             scale(1)`,
+        color: isBooped ? "#08FDD9" : "white",
         config: {
             tension: 300,
             friction: 10,
