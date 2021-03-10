@@ -84,7 +84,6 @@ const mainTitleText = [
     "And I am a Software Developer"
 ];
 const aboutMeTitle = ["About me"];
-const contactMeTitle = ["Contact me"];
 const itemList = [
     ["C++", "C# - Unity", "React JS", "Phyton", "Matlab/Simulink"],
     ["Git", "SVN", "Jenkins", "Unit testing", "SIL", "MIL"],

@@ -8,7 +8,7 @@ import AirplayIcon from '@material-ui/icons/Airplay';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import BookIcon from '@material-ui/icons/Book';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     top: "4.5%",
@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
   icon: {
     color: "#08FDD9",
-    marginRight: "20%",
+    marginRight: "10%",
     transform: "scale(1.25)",
     paddingLeft: "0",
   },
@@ -33,15 +33,21 @@ const useStyles = makeStyles({
   },
   button: {
     boxShadow: "0 4px 2px -2px gray",
-    width: "auto",
-    minWidth: "100px",
+    width: "150px",
+    [theme.breakpoints.down('md')]: {
+        width: "100px",
+    },
+    [theme.breakpoints.down('xs')]: {
+        fontSize: "10px",
+        width: "50px",
+    },
   },
   butonLabel: {
     color: "#08FDD9 !important",
     textDecoration: "none",
     textTransform: "none",
   },
-});
+}));
 
 const sectionsNavBar = [
     {

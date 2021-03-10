@@ -36,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': { 
             backgroundColor: "#286BB0FF",
         },
+        [theme.breakpoints.down('xs')]: {
+            width: "70px",
+            height: "70px",
+            fontSize: "10px",
+        },
     },
     root: {
         color: "#E06566",
@@ -52,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: "0",
         '&:hover': { 
             transform: "scale(3)",
+        },
+        [theme.breakpoints.down('xs')]: {
+            transform: "scale(1.5)",
         },
     },
     rootList: {
