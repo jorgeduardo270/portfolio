@@ -12,7 +12,7 @@ export const aboutMeInfo = [
         cardDetailedTex: "Coursera Specialization",
     },
     {
-        title: "7 December 1941",
+        title: "2020",
         cardTitle: "Coursera Specialization",
         cardSubtitle: "Finished the specialization “Introduction to Discrete Mathematics for Computer Science”",
         cardDetailedTex: "Coursera Specialization",
