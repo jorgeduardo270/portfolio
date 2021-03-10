@@ -71,6 +71,11 @@ const useStyles = makeStyles((theme) => ({
     },
     listSection: {
         marginTop: "50px",
+        width: "100%",
+        minWidth: "500px",
+        margin: "0",
+        marginTop: "0",
+        padding: "0",
     }
 }));
 const mainTitleText = [
@@ -82,8 +87,8 @@ const aboutMeTitle = ["About me"];
 const contactMeTitle = ["Contact me"];
 const itemList = [
     ["C++", "C# - Unity", "React JS", "Phyton", "Matlab/Simulink"],
-    ["Git", "SVN", "Jenkins", "Unit testing", "SIL", "MIL", "HIL"],
-    ["Assembly", "VHDL", "Verilog", "Javascript", "PHP"],
+    ["Git", "SVN", "Jenkins", "Unit testing", "SIL", "MIL"],
+    ["Assembly", "VHDL", "Verilog", "Javascript", "PHP", , "HIL"],
 ];
 
 function HomeScreen (props) {
@@ -154,7 +159,7 @@ function HomeScreen (props) {
                             spacing={1} 
                             direction="row">
                             {section.map(element=> {
-                                return <Grid container item xs={1} spacing={5} key={element}>
+                                return <Grid container item xs={2} lg={1} key={element}>
                                     <p className={style.littleElement}>
                                         {element}
                                     </p>

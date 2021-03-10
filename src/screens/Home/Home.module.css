@@ -4,6 +4,7 @@
     font-size: 50px;
     font-weight: 600;
     position: relative;
+    min-height: 1000px;
 }
 
 .homeScreen{
@@ -62,6 +63,8 @@
     position: absolute;
     bottom: 5%;
     width: 100%;
+    min-width: 700px;
+    height: fit-content;
 }
 
 .littleElement{
@@ -81,7 +84,7 @@
 
 .ultimosProyectos{
     height: auto;
-    min-height: 100vh;
+    min-height: 1000px;
     width: 100%;
     font-size: 40px;
     font-weight: 600;
@@ -103,6 +106,7 @@
     bottom: 10%;
     width: 60vw;
     height: 80vh;
+    min-height: 500px;
 }
 
 .aboutMeContent section{
@@ -147,3 +151,86 @@
     position: relative;
 }
 
+@media screen and (min-width : 700px) and  (max-width : 1600px) {
+    .leftElements{
+        top: 30%;
+        left: 5%;
+    }
+    .rightElements{
+        top: 60%;
+        right: 5%;
+    }
+
+    .bottomElements{
+        min-width: 500px;
+        bottom: 15%;
+    }
+}
+
+@media screen and (min-width : 700px) and  (max-width : 900px) {
+    .leftElements{
+        top: 30%;
+        left: 5%;
+        font-size: smaller;
+    }
+    .rightElements{
+        top: 60%;
+        right: 5%;
+        font-size: smaller;
+    }
+
+    .littleElement{
+        font-size: 15px;
+        min-width: 50px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    .bottomElements{
+        min-width: 500px;
+        bottom: 20%;
+    }
+
+    .aboutMeData {
+        font-size: 20px;
+        padding-top: 20vh;
+    }
+
+    .aboutMeTitle{
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    .leftElements{
+        top: 30%;
+        left: 5%;
+        font-size: 30px;
+    }
+    .rightElements{
+        top: 60%;
+        right: 5%;
+        font-size: 30px;
+    }
+
+    .littleElement{
+        font-size: 10px;
+        min-width: 50px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+
+    .bottomElements{
+        min-width: 500px;
+        bottom: 20%;
+    }
+
+    .aboutMeData {
+        font-size: 15px;
+        padding-top: 20vh;
+    }
+
+    .aboutMeTitle{
+        font-size: 50px;
+    }
+}

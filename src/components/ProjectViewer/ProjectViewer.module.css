@@ -69,3 +69,44 @@
 .projectLink{
     color: white;
 }
+
+@media screen and   (max-width : 1000px) {
+    .focusImage{
+        top: 30%;
+        height: 50%;
+        max-width: 100%;
+        width: 100%;
+        position: absolute;
+    }
+    
+    .focusVideo{
+        top: 30%;
+        height: 50%;
+        max-width: 100%;
+        width: 100%;
+        transform: translate(0, -50%);
+    }
+
+    .rightContent{
+        top: 60%;
+        left: 0%;
+        height: 50%;
+        width: 80%;
+        padding-left: 5%;
+        text-align: left;
+        color: white;
+    }
+
+    .leftArrow{
+        left: 10%;
+        top: 30%;
+        transform: translate(0%, -50%);
+    }
+    
+    .rightArrow{
+        left: 90%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+    }
+}
+

@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     top: "4.5%",
     zIndex: "1",
     fontSize: "25px",
+    width: "100%",
   },
   wrapper: {
     fontSize: "15px",
@@ -32,7 +33,8 @@ const useStyles = makeStyles({
   },
   button: {
     boxShadow: "0 4px 2px -2px gray",
-    width: "150px",
+    width: "auto",
+    minWidth: "100px",
   },
   butonLabel: {
     color: "#08FDD9 !important",
@@ -74,7 +76,7 @@ export default function CenteredTabs() {
         sectionsNavBar.map(element => {
             return <Grid 
                     container item 
-                    sm={4} md={2} 
+                    xs={4} md={2} 
                     spacing={5}  
                     alignContent = "center"
                     alignItems = "center"

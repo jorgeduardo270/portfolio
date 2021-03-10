@@ -12,6 +12,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import IconButton from '@material-ui/core/IconButton';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import LanguageIcon from '@material-ui/icons/Language';
 import ComputerIcon from '@material-ui/icons/Computer';
@@ -25,7 +26,7 @@ const portfolioTitle = ["Projects"];
 
 const useStyles = makeStyles((theme) => ({
     button: {
-        width: "175px",
+        width: "150px",
         height: "70px",
         backgroundColor: "transparent",
         textTransform: "none",
@@ -104,6 +105,7 @@ function PortfolioScreen (props) {
     const [projectIndex, setProjectIndex] = useState(0);
     const [currProjectList, setCurrProjectlist] = useState(projectsData || []);
     var focusSection = document.getElementById("ProjectFocusSection") || "";
+    const isMobile = useMediaQuery("(max-width:1000px)");
 
     useEffect(() => {
         focusSection = document.getElementById("ProjectFocusSection");
@@ -185,23 +187,30 @@ function PortfolioScreen (props) {
                     Others 
                 </Button>
             </div>
-
-            <div className={style.leftProjectArrow}>
-                <ArrowBackIosIcon  
-                    onClick = {() => prevProject()}
-                    className={classes.iconArrows}/>
-            </div>
+            
+            {
+                !isMobile && 
+                <div className={style.leftProjectArrow}>
+                    <ArrowBackIosIcon  
+                        onClick = {() => prevProject()}
+                        className={classes.iconArrows}/>
+                </div>
+            }
 
             <div className={style.projectFocus} id="ProjectFocusSection">
                 <ProjectViewer project={currProjectList[projectIndex]}>
                 </ProjectViewer>
             </div>
 
-            <div className={style.rightProjectArrow}>
-                <ArrowForwardIosIcon 
-                    onClick = {() => nextProject()}
-                    className={classes.iconArrows}/>
-            </div>
+            {
+                !isMobile && 
+                <div className={style.rightProjectArrow}>
+                    <ArrowForwardIosIcon 
+                        onClick = {() => nextProject()}
+                        className={classes.iconArrows}/>
+                </div>
+            }
+            
 
             <div className={style.projectsList}>
                 <div className={classes.rootList}>
