@@ -6,6 +6,7 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import { makeStyles } from '@material-ui/core/styles';
 import { tileData, tileDataUnity, tileDataGame, tileDataOthers } from './Data.js';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const aboutMeTitle = ["Certificates"];
 
@@ -19,9 +20,7 @@ const useStyles = makeStyles((theme) => ({
     },
     gridList: {
       width: "100%",
-      height: "auto",
       // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-      transform: 'translateZ(0)',
     },
     titleBar: {
       background:
@@ -31,10 +30,14 @@ const useStyles = makeStyles((theme) => ({
     icon: {
       color: 'white',
     },
+    listtile: {
+        height: "100% !important",
+    },
 }));
 
 function CertificatesScreen (props) {
     const classes = useStyles();
+    const isMobile = useMediaQuery("(max-width:1000px)");
 
     return <div>
         <NavBar ></NavBar>
@@ -44,33 +47,33 @@ function CertificatesScreen (props) {
             </div>
 
             <div className={style.certificatesData}>
-                <GridList cellHeight={700} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={700}  className={classes.gridList}>
                     {tileData.map((tile) => (
-                    <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
+                    <GridListTile className={classes.listtile} key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
                     </GridListTile>
                     ))}
                 </GridList>
 
-                <GridList cellHeight={700} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={700}  className={classes.gridList}>
                     {tileDataUnity.map((tile) => (
-                    <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
+                    <GridListTile key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
                     </GridListTile>
                     ))}
                 </GridList>
 
-                <GridList cellHeight={700} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={700}  className={classes.gridList}>
                     {tileDataGame.map((tile) => (
-                    <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
+                    <GridListTile key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
                     </GridListTile>
                     ))}
                 </GridList>
 
-                <GridList cellHeight={700} spacing={5} className={classes.gridList}>
+                <GridList cellHeight={700}  className={classes.gridList}>
                     {tileDataOthers.map((tile) => (
-                    <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
+                    <GridListTile key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
                     </GridListTile>
                     ))}
