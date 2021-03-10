@@ -57,7 +57,7 @@ function CertificatesScreen (props) {
 
                 <GridList cellHeight={700}  className={classes.gridList}>
                     {tileDataUnity.map((tile) => (
-                    <GridListTile key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
+                    <GridListTile className={classes.listtile} key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
                     </GridListTile>
                     ))}
@@ -65,7 +65,7 @@ function CertificatesScreen (props) {
 
                 <GridList cellHeight={700}  className={classes.gridList}>
                     {tileDataGame.map((tile) => (
-                    <GridListTile key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
+                    <GridListTile className={classes.listtile} key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
                     </GridListTile>
                     ))}
@@ -73,7 +73,7 @@ function CertificatesScreen (props) {
 
                 <GridList cellHeight={700}  className={classes.gridList}>
                     {tileDataOthers.map((tile) => (
-                    <GridListTile key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
+                    <GridListTile className={classes.listtile} key={tile.key} cols={tile.featured || isMobile ? 2 : 1} rows={1}>
                         <img src={tile.img} alt={tile.title} className={style.containedimage}/>
                     </GridListTile>
                     ))}
